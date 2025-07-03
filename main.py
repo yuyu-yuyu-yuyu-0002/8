@@ -10,7 +10,11 @@ def create_app():
     app.config.from_object(Config)
     
     # 啟用 CORS
-    CORS(app)
+    CORS(app, origins=[
+    "https://line-knowledge.vercel.app",
+    "http://localhost:3000",  # 本地開發用
+    "http://localhost:8080"   # 本地開發用
+])
     
     # 註冊藍圖
     app.register_blueprint(knowledge_bp, url_prefix='/api')
