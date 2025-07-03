@@ -11,7 +11,7 @@ def create_app():
     
     # 啟用 CORS
     CORS(app, origins=[
-    "https://line-knowledge.vercel.app",
+    "https://line-bot-knowledge.vercel.app/",
     "http://localhost:3000",  # 本地開發用
     "http://localhost:8080"   # 本地開發用
 ])
